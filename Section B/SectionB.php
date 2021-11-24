@@ -14,6 +14,10 @@ $data = curl_exec($ch);
 // Close the cURL session
 curl_close($ch);
 
+
+if($data){
+  print 'Starting to parse the XML File...';
+
 // Put the XML data into a SimpleXML object
 $xml = simplexml_load_string($data);
 
@@ -36,5 +40,9 @@ $header = ["Currency_Code", "Rate"];
 fputcsv($fp, $header);
 fputcsv($fp, $exchange);
 
-print "Done."
+print "\n Done.";
+}else{
+    print "Error. Check your URL Link";
+}
+
 ?>
