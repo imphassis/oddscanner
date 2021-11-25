@@ -1,126 +1,80 @@
 <?php
-$URL = 'https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml';
 
 class convertCurrencies
 {
   public $currencies = [];
-  public $rates = [];
-  public $base = 'EUR';
+  public $convertedRates = [];
+  public $currencyRate = ''; // Rate based on chosen currency
+  public $URL = 'https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml';
 
-  function getXML()
+  function __construct($COIN)
+  {
+    $this->coin = $COIN;
+  }
+
+  private function getXML()
   {
     try {
-      global $URL;
       $ch = curl_init();
-      curl_setopt($ch, CURLOPT_URL, $URL);
+      curl_setopt($ch, CURLOPT_URL, $this->URL);
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
       $xml = curl_exec($ch);
       curl_close($ch);
-      return simplexml_load_string($xml);
+      $xml = simplexml_load_string($xml);
+      $this->currencies = $xml->Cube->Cube->Cube;
     } catch (\Throwable $th) {
       throw $th;
     }
   }
 
-  function getRate($chosenCurrency)
+  private function findCoinRate()
   {
-    global $rates;
-    foreach ($rates as $r) {
-      if ($r->attributes()->currency == $chosenCurrency) {
-        return (string) $r->attributes()->rate;
+    foreach ($this->currencies as $c) {
+      if ($c->attributes()->currency == $this->coin) {
+        $this->currencyRate = (string) $c->attributes()->rate;
       }
     }
   }
 
-  function convertCurrencies($currency)
+  private function convertCurrencies()
   {
-    $currencyValue = getRate($currency);
-    global $rates;
-    $convertedRates = [];
-    foreach ($rates as $r) {
-      $roundedRate = round($r->attributes()->rate / $currencyValue, 4);
-      $rateName = $r->attributes()->currency;
+    foreach ($this->currencies as $c) {
+      $rate = round($c->attributes()->rate / $this->currencyRate, 4);
+      $rateName = $c->attributes()->currency;
 
-      if ($rateName == $currency) {
+      if ($rateName == $this->coin) {
         array_push(
-          $convertedRates,
-          'EUR' . ': ' . round($roundedRate / $currencyValue, 4)
+          $this->convertedRates,
+          'EUR' . ': ' . round($rate / $this->currencyRate, 4)
         );
       } else {
-        array_push($convertedRates, $rateName . ': ' . $roundedRate);
+        array_push($this->convertedRates, $rateName . ': ' . $rate);
       }
     }
-    return $convertedRates;
   }
 
-  function saveToFile()
+  private function saveToFile()
   {
-    $currencyArray = convertCurrencies('BRL');
-
     $date = date('Y_m_d');
-    $fp = fopen("usd_currency_rates_{$date}", 'w');
+    $fp = fopen("{$this->coin}_currency_rates_{$date}", 'w');
     $header = ['Currency_Code', 'Rate'];
-
     fputcsv($fp, $header);
-    foreach ($currencyArray as $currency) {
+    foreach ($this->convertedRates as $currency) {
       fputcsv($fp, explode(':', $currency));
     }
+  }
+
+  function getData()
+  {
+    $this->getXML();
+    $this->findCoinRate();
+    $this->convertCurrencies();
+    $this->saveToFile();
     print "\n Done.";
   }
 }
 
-// function getXML()
-// {
-//   try {
-//     global $URL;
-//     $ch = curl_init();
-//     curl_setopt($ch, CURLOPT_URL, $URL);
-//     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-//     $xml = curl_exec($ch);
-//     curl_close($ch);
-//     // Put the XML data into a SimpleXML object
-//     return simplexml_load_string($xml);
-//   } catch (\Throwable $th) {
-//     throw $th;
-//   }
-// }
-
-// $xml = getXML();
-// $rates = $xml->Cube->Cube->Cube;
-
-// function getRate($chosenCurrency)
-// {
-//   global $rates;
-//   foreach ($rates as $r) {
-//     if ($r->attributes()->currency == $chosenCurrency) {
-//       return (string) $r->attributes()->rate;
-//     }
-//   }
-// }
-
-// function convertCurrencies($currency)
-// {
-//   $currencyValue = getRate($currency);
-//   global $rates;
-//   $convertedRates = [];
-//   foreach ($rates as $r) {
-//     $roundedRate = round($r->attributes()->rate / $currencyValue, 4);
-//     $rateName = $r->attributes()->currency;
-
-//     if ($rateName == $currency) {
-//       array_push(
-//         $convertedRates,
-//         'EUR' . ': ' . round($roundedRate / $currencyValue, 4)
-//       );
-//     } else {
-//       array_push($convertedRates, $rateName . ': ' . $roundedRate);
-//     }
-//   }
-//   return $convertedRates;
-// }
-
-// } else {
-//   print 'Error. Check your URL Link';
-// }
+$convert = new convertCurrencies('BRL');
+$convert->getData();
 
 ?>
