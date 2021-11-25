@@ -63,7 +63,7 @@ FROM
   -- The Location_ID must be the one in which the CITY column have the value 'London',
   -- that's why we have multiple SELECTS.
 WHERE
-  e.DEPARTMENT_ID = (
+  e.DEPARTMENT_ID IN (
     SELECT
       DEPARTMENT_ID
     FROM
@@ -80,6 +80,10 @@ WHERE
   );
   
   
+
+
+
+
   
 -- 5. Write a query to get the department name and number of employees in the department
 SELECT

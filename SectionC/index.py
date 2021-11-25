@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
 # Defining webdriver options
+#  ADD OPTION TO WAIT 10 SECONDS OR UNTIL THE PAGE IS LOADED
 
 options = Options()
 options.add_experimental_option("excludeSwitches", ["enable-logging"])
