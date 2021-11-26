@@ -17,12 +17,9 @@ print("Checking if ChromeDriverManager is installed")
 driver = webdriver.Chrome(service=s, options=options)
 
 
-EXAMPLE_URL = "https://finance.yahoo.com/quote/BTC-EUR/history/"
-
-
 class FinanceScraper:
-    def __init__(self, URL, fileName, range):
-        self.URL = URL
+    def __init__(self, fileName, range):
+        self.URL = "https://finance.yahoo.com/quote/BTC-EUR/history/"
         self.rows = []
         self.fileName = fileName
         self.range = range
@@ -75,6 +72,6 @@ class FinanceScraper:
             print(f"\nData was successfully scraped, saved in {self.fileName}")
 
 
-currencies = FinanceScraper(EXAMPLE_URL, "eur_btc_rates.csv", 10)
+currencies = FinanceScraper("eur_btc_rates.csv", 10)  # Filename, range of days
 
 currencies.main()
