@@ -34,10 +34,13 @@ class convertCurrencies
 
   private function findCoinRate()
   {
-    foreach ($this->currencies as $c) {
-      if ($c->attributes()->currency == $this->coin) {
-        // Now, we have the rate of the chosen currency based on EUR.
-        $this->exchangeRate = (string) $c->attributes()->rate;
+    if ($this->coin == 'EUR') {
+      $this->exchangeRate = 1;
+    } else {
+      foreach ($this->currencies as $c) {
+        if ($c->attributes()->currency == $this->coin) {
+          $this->exchangeRate = (string) $c->attributes()->rate;
+        }
       }
     }
   }
@@ -75,7 +78,7 @@ class convertCurrencies
   {
     $this->getXML();
     $currenciesLength = count($this->currencies);
-    if ($currenciesLength > 0) {
+    if ($currenciesLength > 0 and $this->exchangeRate != '') {
       $this->findCoinRate();
       $this->convertCurrencies();
       $this->saveToFile($this->convertedRates);
@@ -83,12 +86,12 @@ class convertCurrencies
         "All currencies were converted to {$this->coin} base sucessfully."
       );
     } else {
-      print 'Error: No data found.';
+      print 'Error: No data found. Please check your spelling';
     }
   }
 }
 
-$convert = new convertCurrencies('BRL');
+$convert = new convertCurrencies('USD');
 $convert->main();
 
 ?>
