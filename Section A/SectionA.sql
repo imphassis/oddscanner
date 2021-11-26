@@ -80,11 +80,6 @@ WHERE
   );
   
   
-
-
-
-
-  
 -- 5. Write a query to get the department name and number of employees in the department
 SELECT
   COUNT(*) as Total_Employees,

@@ -4,7 +4,7 @@ class convertCurrencies
 {
   public $currencies = [];
   public $convertedRates = [];
-  public $currencyRate = ''; // Rate based on chosen currency
+  public $exchangeRate = ''; // Rate proportion between EUR and Selected Currency
   public $URL = 'https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml';
 
   function __construct($COIN)
@@ -18,12 +18,17 @@ class convertCurrencies
       $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL, $this->URL);
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+      print_r("Initializing XML Parse...\n");
       $xml = curl_exec($ch);
       curl_close($ch);
       $xml = simplexml_load_string($xml);
+      if ($xml === false) {
+        throw new Exception('Error parsing XML');
+      }
+      // Saving all the currencies with their exchange rates in an array
       $this->currencies = $xml->Cube->Cube->Cube;
-    } catch (\Throwable $th) {
-      throw $th;
+    } catch (Exception $e) {
+      echo 'Error: ' . $e->getMessage();
     }
   }
 
@@ -31,7 +36,8 @@ class convertCurrencies
   {
     foreach ($this->currencies as $c) {
       if ($c->attributes()->currency == $this->coin) {
-        $this->currencyRate = (string) $c->attributes()->rate;
+        // Now, we have the rate of the chosen currency based on EUR.
+        $this->exchangeRate = (string) $c->attributes()->rate;
       }
     }
   }
@@ -39,13 +45,14 @@ class convertCurrencies
   private function convertCurrencies()
   {
     foreach ($this->currencies as $c) {
-      $rate = round($c->attributes()->rate / $this->currencyRate, 4);
+      // Divide the exchange value by the rate of the chosen currency
+      $rate = round($c->attributes()->rate / $this->exchangeRate, 4);
       $rateName = $c->attributes()->currency;
 
       if ($rateName == $this->coin) {
         array_push(
           $this->convertedRates,
-          'EUR' . ': ' . round($rate / $this->currencyRate, 4)
+          'EUR' . ': ' . round($rate / $this->exchangeRate, 4)
         );
       } else {
         array_push($this->convertedRates, $rateName . ': ' . $rate);
@@ -53,28 +60,35 @@ class convertCurrencies
     }
   }
 
-  private function saveToFile()
+  private function saveToFile($array)
   {
     $date = date('Y_m_d');
     $fp = fopen("{$this->coin}_currency_rates_{$date}", 'w');
     $header = ['Currency_Code', 'Rate'];
     fputcsv($fp, $header);
-    foreach ($this->convertedRates as $currency) {
+    foreach ($array as $currency) {
       fputcsv($fp, explode(':', $currency));
     }
   }
 
-  function getData()
+  function main()
   {
     $this->getXML();
-    $this->findCoinRate();
-    $this->convertCurrencies();
-    $this->saveToFile();
-    print "\n Done.";
+    $currenciesLength = count($this->currencies);
+    if ($currenciesLength > 0) {
+      $this->findCoinRate();
+      $this->convertCurrencies();
+      $this->saveToFile($this->convertedRates);
+      print_r(
+        "All currencies were converted to {$this->coin} base sucessfully."
+      );
+    } else {
+      print 'Error: No data found.';
+    }
   }
 }
 
 $convert = new convertCurrencies('BRL');
-$convert->getData();
+$convert->main();
 
 ?>
