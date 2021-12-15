@@ -192,9 +192,6 @@ class tableManager {
   }
 
 
-
-
-
   public function create_competition_season_table() {
     try {
       $dbConnection = $this->connect();
@@ -208,6 +205,25 @@ class tableManager {
       $dbConnection->exec($sql);
       $dbConnection = null;
       print_r("Table competition_season created successfully\n");
+    } catch (Exception $e) {
+      echo 'Caught exception: ',  $e->getMessage(), "\n";
+    }
+  }
+
+
+  public function create_competition_map_table() {
+    try {
+      $dbConnection = $this->connect();
+      $sql = "CREATE TABLE IF NOT EXISTS `competitions_map` (
+             `competition_op_id` INT(11) NOT NULL,
+             `operator` VARCHAR(255) NOT NULL,
+             `competition_id` INT(11) NOT NULL,
+              PRIMARY KEY (`competition_op_id`, `operator`),
+              FOREIGN KEY (`competition_id`) REFERENCES `competitions`(`id`)
+              )ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+      $dbConnection->exec($sql);
+      $dbConnection = null;
+      print_r("Table competition_map created successfully\n");
     } catch (Exception $e) {
       echo 'Caught exception: ',  $e->getMessage(), "\n";
     }
@@ -240,7 +256,7 @@ class tableManager {
   public function drop_all_tables() {
     try {
       $dbConnection = $this->connect();
-      $sql = "DROP TABLE IF EXISTS `geographical_areas`, `competition_season`, `fixtures_markets`, `markets_map`, `teams`, `competitions`, `teams_map`, `fixtures_map`,`fixtures`, `markets`;";
+      $sql = "DROP TABLE IF EXISTS `geographical_areas`, `competitions_map`, `competition_season`, `fixtures_markets`, `markets_map`, `teams`, `competitions`, `teams_map`, `fixtures_map`,`fixtures`, `markets`;";
       $dbConnection->exec($sql);
 
       print_r("All tables dropped successfully\n");
@@ -249,6 +265,27 @@ class tableManager {
       echo 'Caught exception: ',  $e->getMessage(), "\n";
     }
   }
+
+  public function create_fixture_markets_odds_table() {
+    try {
+      $dbConnection = $this->connect();
+      $sql = "CREATE TABLE IF NOT EXISTS `fixtures_markets_odds` (
+             `fixture_id` INT(11) NOT NULL,
+             `operator` INT(11) NOT NULL,
+             `odd` VARCHAR(255) NOT NULL,
+             `datetime` DATETIME NOT NULL,
+             FOREIGN KEY (`fixture_id`) REFERENCES `fixtures_market`(`fixture_id`)
+              )ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+      $dbConnection->exec($sql);
+      $dbConnection = null;
+      print_r("Table fixture_markets_odds created successfully\n");
+    } catch (Exception $e) {
+      echo 'Caught exception: ',  $e->getMessage(), "\n";
+    } catch (Exception $e) {
+      echo 'Caught exception: ',  $e->getMessage(), "\n";
+    }
+  }
+
 
   public function create_tables() {
     try {
@@ -262,6 +299,7 @@ class tableManager {
       $this->create_market_table();
       $this->create_fixtures_markets_table();
       $this->create_market_map_table();
+      $this->create_competition_map_table();
     } catch (Exception $e) {
       echo 'Caught exception: ',  $e->getMessage(), "\n";
     }

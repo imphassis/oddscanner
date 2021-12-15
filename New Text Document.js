@@ -35,3 +35,14 @@
 // MARKETS
 // MARKETS_MAP
 // FIXTURES
+
+// create table fixture_markets_odds
+
+//
+
+// Verificar se o jogo está na base de dados.
+// Se o jogo estiver na base de dados => Passar pelos mercados, tentar inserir os mercados
+// Se os mercados já estiverem na base de dados (como identificar os mercados?), não inserir no fixture_markets
+// ir em fixture_markets_odds insere os dados com datetime (primary key)
+
+// Depois, ir em markets_odds

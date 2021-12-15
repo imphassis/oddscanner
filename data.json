@@ -19,9 +19,9 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2384161369", "name": "1", "price": 2.62 },
-          { "id": "2384161370", "name": "X", "price": 3.15 },
-          { "id": "2384161371", "name": "2", "price": 2.37 }
+          { "id": "2384161369", "name": "1", "price": 2.57 },
+          { "id": "2384161370", "name": "X", "price": 3.2 },
+          { "id": "2384161371", "name": "2", "price": 2.4 }
         ]
       },
       {
@@ -39,7 +39,7 @@
         "name": "Total de Golos Mais/Menos",
         "selections": [
           { "id": "2384166574", "name": "Mais de 1.5", "price": 1.26 },
-          { "id": "2384166575", "name": "Menos de 1.5", "price": 2.82 }
+          { "id": "2384166575", "name": "Menos de 1.5", "price": 2.8 }
         ]
       },
       {
@@ -47,8 +47,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384166572", "name": "Mais de 2.5", "price": 1.75 },
-          { "id": "2384166573", "name": "Menos de 2.5", "price": 1.72 }
+          { "id": "2384166572", "name": "Mais de 2.5", "price": 1.78 },
+          { "id": "2384166573", "name": "Menos de 2.5", "price": 1.7 }
         ]
       },
       {
@@ -56,7 +56,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384166576", "name": "Mais de 3.5", "price": 2.7 },
+          { "id": "2384166576", "name": "Mais de 3.5", "price": 2.72 },
           { "id": "2384166577", "name": "Menos de 3.5", "price": 1.28 }
         ]
       },
@@ -65,7 +65,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384166578", "name": "Mais de 4.5", "price": 4.1 },
+          { "id": "2384166578", "name": "Mais de 4.5", "price": 4.15 },
           { "id": "2384166579", "name": "Menos de 4.5", "price": 1.1 }
         ]
       },
@@ -83,7 +83,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384166584", "name": "Mais de 6.5", "price": 7.4 },
+          { "id": "2384166584", "name": "Mais de 6.5", "price": 7.5 },
           { "id": "2384166585", "name": "Menos de 6.5", "price": 1.01 }
         ]
       },
@@ -92,8 +92,8 @@
         "type": "BTSC",
         "name": "Ambas as Equipas Marcam",
         "selections": [
-          { "id": "2384161394", "name": "Sim", "price": 1.6 },
-          { "id": "2384161395", "name": "N\u00e3o", "price": 1.9 }
+          { "id": "2384161394", "name": "Sim", "price": 1.62 },
+          { "id": "2384161395", "name": "N\u00e3o", "price": 1.87 }
         ]
       }
     ],
@@ -119,9 +119,9 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2384162016", "name": "1", "price": 2.35 },
+          { "id": "2384162016", "name": "1", "price": 2.4 },
           { "id": "2384162017", "name": "X", "price": 3.2 },
-          { "id": "2384162018", "name": "2", "price": 2.6 }
+          { "id": "2384162018", "name": "2", "price": 2.57 }
         ]
       },
       {
@@ -156,7 +156,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384167502", "name": "Mais de 3.5", "price": 2.57 },
+          { "id": "2384167502", "name": "Mais de 3.5", "price": 2.6 },
           { "id": "2384167503", "name": "Menos de 3.5", "price": 1.31 }
         ]
       },
@@ -174,7 +174,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384167510", "name": "Mais de 5.5", "price": 5.3 },
+          { "id": "2384167510", "name": "Mais de 5.5", "price": 5.4 },
           { "id": "2384167511", "name": "Menos de 5.5", "price": 1.04 }
         ]
       },
@@ -219,8 +219,8 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2384162663", "name": "1", "price": 2.37 },
-          { "id": "2384162664", "name": "X", "price": 3.25 },
+          { "id": "2384162663", "name": "1", "price": 2.4 },
+          { "id": "2384162664", "name": "X", "price": 3.2 },
           { "id": "2384162665", "name": "2", "price": 2.55 }
         ]
       },
@@ -229,8 +229,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384169177", "name": "Mais de 0.5", "price": 1.04 },
-          { "id": "2384169179", "name": "Menos de 0.5", "price": 5.2 }
+          { "id": "2384169177", "name": "Mais de 0.5", "price": 1.05 },
+          { "id": "2384169179", "name": "Menos de 0.5", "price": 5.1 }
         ]
       },
       {
@@ -292,8 +292,8 @@
         "type": "BTSC",
         "name": "Ambas as Equipas Marcam",
         "selections": [
-          { "id": "2384162688", "name": "Sim", "price": 1.6 },
-          { "id": "2384162689", "name": "N\u00e3o", "price": 1.91 }
+          { "id": "2384162688", "name": "Sim", "price": 1.57 },
+          { "id": "2384162689", "name": "N\u00e3o", "price": 1.95 }
         ]
       }
     ],
@@ -319,7 +319,7 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2384163322", "name": "1", "price": 4.6 },
+          { "id": "2384163322", "name": "1", "price": 4.55 },
           { "id": "2384163323", "name": "X", "price": 3.75 },
           { "id": "2384163324", "name": "2", "price": 1.57 }
         ]
@@ -357,7 +357,7 @@
         "name": "Total de Golos Mais/Menos",
         "selections": [
           { "id": "2384169058", "name": "Mais de 3.5", "price": 2.5 },
-          { "id": "2384169059", "name": "Menos de 3.5", "price": 1.34 }
+          { "id": "2384169059", "name": "Menos de 3.5", "price": 1.33 }
         ]
       },
       {
@@ -365,8 +365,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384169063", "name": "Mais de 4.5", "price": 3.8 },
-          { "id": "2384169064", "name": "Menos de 4.5", "price": 1.13 }
+          { "id": "2384169063", "name": "Mais de 4.5", "price": 3.85 },
+          { "id": "2384169064", "name": "Menos de 4.5", "price": 1.12 }
         ]
       },
       {
@@ -374,7 +374,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384169067", "name": "Mais de 5.5", "price": 5.2 },
+          { "id": "2384169067", "name": "Mais de 5.5", "price": 5.3 },
           { "id": "2384169068", "name": "Menos de 5.5", "price": 1.04 }
         ]
       },
@@ -383,7 +383,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384169070", "name": "Mais de 6.5", "price": 6.8 },
+          { "id": "2384169070", "name": "Mais de 6.5", "price": 6.9 },
           { "id": "2384169071", "name": "Menos de 6.5", "price": 1.01 }
         ]
       },
@@ -419,8 +419,8 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2384163973", "name": "1", "price": 2.22 },
-          { "id": "2384163974", "name": "X", "price": 3.2 },
+          { "id": "2384163973", "name": "1", "price": 2.2 },
+          { "id": "2384163974", "name": "X", "price": 3.25 },
           { "id": "2384163975", "name": "2", "price": 2.8 }
         ]
       },
@@ -447,8 +447,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384169913", "name": "Mais de 2.5", "price": 1.75 },
-          { "id": "2384169917", "name": "Menos de 2.5", "price": 1.72 }
+          { "id": "2384169913", "name": "Mais de 2.5", "price": 1.72 },
+          { "id": "2384169917", "name": "Menos de 2.5", "price": 1.75 }
         ]
       },
       {
@@ -456,7 +456,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384169922", "name": "Mais de 3.5", "price": 2.7 },
+          { "id": "2384169922", "name": "Mais de 3.5", "price": 2.67 },
           { "id": "2384169924", "name": "Menos de 3.5", "price": 1.29 }
         ]
       },
@@ -465,8 +465,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384169928", "name": "Mais de 4.5", "price": 4.1 },
-          { "id": "2384169929", "name": "Menos de 4.5", "price": 1.1 }
+          { "id": "2384169928", "name": "Mais de 4.5", "price": 4.05 },
+          { "id": "2384169929", "name": "Menos de 4.5", "price": 1.11 }
         ]
       },
       {
@@ -483,7 +483,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384169939", "name": "Mais de 6.5", "price": 7.5 },
+          { "id": "2384169939", "name": "Mais de 6.5", "price": 7.4 },
           { "id": "2384169941", "name": "Menos de 6.5", "price": 1.01 }
         ]
       },
@@ -519,9 +519,9 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2384164523", "name": "1", "price": 2.42 },
+          { "id": "2384164523", "name": "1", "price": 2.47 },
           { "id": "2384164525", "name": "X", "price": 3.15 },
-          { "id": "2384164527", "name": "2", "price": 2.6 }
+          { "id": "2384164527", "name": "2", "price": 2.52 }
         ]
       },
       {
@@ -556,7 +556,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384170369", "name": "Mais de 3.5", "price": 2.8 },
+          { "id": "2384170369", "name": "Mais de 3.5", "price": 2.82 },
           { "id": "2384170371", "name": "Menos de 3.5", "price": 1.26 }
         ]
       },
@@ -565,7 +565,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384170373", "name": "Mais de 4.5", "price": 4.25 },
+          { "id": "2384170373", "name": "Mais de 4.5", "price": 4.3 },
           { "id": "2384170381", "name": "Menos de 4.5", "price": 1.09 }
         ]
       },
@@ -574,7 +574,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384170394", "name": "Mais de 5.5", "price": 5.6 },
+          { "id": "2384170394", "name": "Mais de 5.5", "price": 5.7 },
           { "id": "2384170398", "name": "Menos de 5.5", "price": 1.03 }
         ]
       },
@@ -583,7 +583,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384170403", "name": "Mais de 6.5", "price": 7.8 },
+          { "id": "2384170403", "name": "Mais de 6.5", "price": 8 },
           { "id": "2384170406", "name": "Menos de 6.5", "price": 1.01 }
         ]
       },
@@ -593,7 +593,7 @@
         "name": "Ambas as Equipas Marcam",
         "selections": [
           { "id": "2384164568", "name": "Sim", "price": 1.65 },
-          { "id": "2384164569", "name": "N\u00e3o", "price": 1.85 }
+          { "id": "2384164569", "name": "N\u00e3o", "price": 1.83 }
         ]
       }
     ],
@@ -639,7 +639,7 @@
         "name": "Total de Golos Mais/Menos",
         "selections": [
           { "id": "2384170853", "name": "Mais de 1.5", "price": 1.26 },
-          { "id": "2384170854", "name": "Menos de 1.5", "price": 2.77 }
+          { "id": "2384170854", "name": "Menos de 1.5", "price": 2.8 }
         ]
       },
       {
@@ -721,7 +721,7 @@
         "selections": [
           { "id": "2384165925", "name": "1", "price": 2.45 },
           { "id": "2384165926", "name": "X", "price": 3.25 },
-          { "id": "2384165927", "name": "2", "price": 2.47 }
+          { "id": "2384165927", "name": "2", "price": 2.5 }
         ]
       },
       {
@@ -730,7 +730,7 @@
         "name": "Total de Golos Mais/Menos",
         "selections": [
           { "id": "2384171255", "name": "Mais de 0.5", "price": 1.04 },
-          { "id": "2384171256", "name": "Menos de 0.5", "price": 5.3 }
+          { "id": "2384171256", "name": "Menos de 0.5", "price": 5.2 }
         ]
       },
       {
@@ -738,7 +738,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384171251", "name": "Mais de 1.5", "price": 1.22 },
+          { "id": "2384171251", "name": "Mais de 1.5", "price": 1.23 },
           { "id": "2384171252", "name": "Menos de 1.5", "price": 3 }
         ]
       },
@@ -747,8 +747,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384171247", "name": "Mais de 2.5", "price": 1.65 },
-          { "id": "2384171248", "name": "Menos de 2.5", "price": 1.83 }
+          { "id": "2384171247", "name": "Mais de 2.5", "price": 1.7 },
+          { "id": "2384171248", "name": "Menos de 2.5", "price": 1.78 }
         ]
       },
       {
@@ -756,8 +756,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384171249", "name": "Mais de 3.5", "price": 2.52 },
-          { "id": "2384171250", "name": "Menos de 3.5", "price": 1.33 }
+          { "id": "2384171249", "name": "Mais de 3.5", "price": 2.55 },
+          { "id": "2384171250", "name": "Menos de 3.5", "price": 1.32 }
         ]
       },
       {
@@ -765,7 +765,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384171253", "name": "Mais de 4.5", "price": 3.85 },
+          { "id": "2384171253", "name": "Mais de 4.5", "price": 3.9 },
           { "id": "2384171254", "name": "Menos de 4.5", "price": 1.12 }
         ]
       },
@@ -783,7 +783,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384171259", "name": "Mais de 6.5", "price": 6.8 },
+          { "id": "2384171259", "name": "Mais de 6.5", "price": 6.9 },
           { "id": "2384171260", "name": "Menos de 6.5", "price": 1.01 }
         ]
       },
@@ -819,9 +819,9 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2384166696", "name": "1", "price": 2.27 },
-          { "id": "2384166697", "name": "X", "price": 3.3 },
-          { "id": "2384166698", "name": "2", "price": 2.65 }
+          { "id": "2384166696", "name": "1", "price": 2.3 },
+          { "id": "2384166697", "name": "X", "price": 3.2 },
+          { "id": "2384166698", "name": "2", "price": 2.7 }
         ]
       },
       {
@@ -838,8 +838,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384171355", "name": "Mais de 1.5", "price": 1.25 },
-          { "id": "2384171356", "name": "Menos de 1.5", "price": 2.85 }
+          { "id": "2384171355", "name": "Mais de 1.5", "price": 1.24 },
+          { "id": "2384171356", "name": "Menos de 1.5", "price": 2.9 }
         ]
       },
       {
@@ -856,8 +856,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384171353", "name": "Mais de 3.5", "price": 2.67 },
-          { "id": "2384171354", "name": "Menos de 3.5", "price": 1.29 }
+          { "id": "2384171353", "name": "Mais de 3.5", "price": 2.62 },
+          { "id": "2384171354", "name": "Menos de 3.5", "price": 1.3 }
         ]
       },
       {
@@ -865,8 +865,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384171357", "name": "Mais de 4.5", "price": 4.1 },
-          { "id": "2384171358", "name": "Menos de 4.5", "price": 1.1 }
+          { "id": "2384171357", "name": "Mais de 4.5", "price": 4 },
+          { "id": "2384171358", "name": "Menos de 4.5", "price": 1.11 }
         ]
       },
       {
@@ -874,8 +874,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384171361", "name": "Mais de 5.5", "price": 5.5 },
-          { "id": "2384171362", "name": "Menos de 5.5", "price": 1.03 }
+          { "id": "2384171361", "name": "Mais de 5.5", "price": 5.4 },
+          { "id": "2384171362", "name": "Menos de 5.5", "price": 1.04 }
         ]
       },
       {
@@ -883,7 +883,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384171363", "name": "Mais de 6.5", "price": 7.4 },
+          { "id": "2384171363", "name": "Mais de 6.5", "price": 7.2 },
           { "id": "2384171364", "name": "Menos de 6.5", "price": 1.01 }
         ]
       },
@@ -892,8 +892,8 @@
         "type": "BTSC",
         "name": "Ambas as Equipas Marcam",
         "selections": [
-          { "id": "2384166723", "name": "Sim", "price": 1.62 },
-          { "id": "2384166724", "name": "N\u00e3o", "price": 1.88 }
+          { "id": "2384166723", "name": "Sim", "price": 1.6 },
+          { "id": "2384166724", "name": "N\u00e3o", "price": 1.91 }
         ]
       }
     ],
@@ -919,9 +919,9 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2384167638", "name": "1", "price": 2.25 },
+          { "id": "2384167638", "name": "1", "price": 2.3 },
           { "id": "2384167639", "name": "X", "price": 3.3 },
-          { "id": "2384167640", "name": "2", "price": 2.67 }
+          { "id": "2384167640", "name": "2", "price": 2.62 }
         ]
       },
       {
@@ -939,7 +939,7 @@
         "name": "Total de Golos Mais/Menos",
         "selections": [
           { "id": "2384171806", "name": "Mais de 1.5", "price": 1.22 },
-          { "id": "2384171807", "name": "Menos de 1.5", "price": 3.05 }
+          { "id": "2384171807", "name": "Menos de 1.5", "price": 3 }
         ]
       },
       {
@@ -956,8 +956,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384171803", "name": "Mais de 3.5", "price": 2.47 },
-          { "id": "2384171805", "name": "Menos de 3.5", "price": 1.34 }
+          { "id": "2384171803", "name": "Mais de 3.5", "price": 2.5 },
+          { "id": "2384171805", "name": "Menos de 3.5", "price": 1.33 }
         ]
       },
       {
@@ -965,8 +965,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384171808", "name": "Mais de 4.5", "price": 3.8 },
-          { "id": "2384171809", "name": "Menos de 4.5", "price": 1.13 }
+          { "id": "2384171808", "name": "Mais de 4.5", "price": 3.85 },
+          { "id": "2384171809", "name": "Menos de 4.5", "price": 1.12 }
         ]
       },
       {
@@ -974,7 +974,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384171814", "name": "Mais de 5.5", "price": 5.2 },
+          { "id": "2384171814", "name": "Mais de 5.5", "price": 5.3 },
           { "id": "2384171815", "name": "Menos de 5.5", "price": 1.04 }
         ]
       },
@@ -983,7 +983,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384171816", "name": "Mais de 6.5", "price": 6.7 },
+          { "id": "2384171816", "name": "Mais de 6.5", "price": 6.8 },
           { "id": "2384171817", "name": "Menos de 6.5", "price": 1.01 }
         ]
       },
@@ -1020,8 +1020,8 @@
         "name": "Resultado Final",
         "selections": [
           { "id": "2384167766", "name": "1", "price": 1.6 },
-          { "id": "2384167767", "name": "X", "price": 3.8 },
-          { "id": "2384167769", "name": "2", "price": 4.35 }
+          { "id": "2384167767", "name": "X", "price": 3.75 },
+          { "id": "2384167769", "name": "2", "price": 4.45 }
         ]
       },
       {
@@ -1030,7 +1030,7 @@
         "name": "Total de Golos Mais/Menos",
         "selections": [
           { "id": "2384172172", "name": "Mais de 0.5", "price": 1.04 },
-          { "id": "2384172173", "name": "Menos de 0.5", "price": 5.4 }
+          { "id": "2384172173", "name": "Menos de 0.5", "price": 5.3 }
         ]
       },
       {
@@ -1039,7 +1039,7 @@
         "name": "Total de Golos Mais/Menos",
         "selections": [
           { "id": "2384172166", "name": "Mais de 1.5", "price": 1.22 },
-          { "id": "2384172167", "name": "Menos de 1.5", "price": 3.05 }
+          { "id": "2384172167", "name": "Menos de 1.5", "price": 3 }
         ]
       },
       {
@@ -1047,8 +1047,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384172164", "name": "Mais de 2.5", "price": 1.65 },
-          { "id": "2384172165", "name": "Menos de 2.5", "price": 1.83 }
+          { "id": "2384172164", "name": "Mais de 2.5", "price": 1.7 },
+          { "id": "2384172165", "name": "Menos de 2.5", "price": 1.78 }
         ]
       },
       {
@@ -1056,8 +1056,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384172168", "name": "Mais de 3.5", "price": 2.52 },
-          { "id": "2384172169", "name": "Menos de 3.5", "price": 1.33 }
+          { "id": "2384172168", "name": "Mais de 3.5", "price": 2.55 },
+          { "id": "2384172169", "name": "Menos de 3.5", "price": 1.32 }
         ]
       },
       {
@@ -1065,7 +1065,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384172170", "name": "Mais de 4.5", "price": 3.85 },
+          { "id": "2384172170", "name": "Mais de 4.5", "price": 3.95 },
           { "id": "2384172171", "name": "Menos de 4.5", "price": 1.12 }
         ]
       },
@@ -1074,7 +1074,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384172174", "name": "Mais de 5.5", "price": 5.3 },
+          { "id": "2384172174", "name": "Mais de 5.5", "price": 5.4 },
           { "id": "2384172175", "name": "Menos de 5.5", "price": 1.04 }
         ]
       },
@@ -1083,7 +1083,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384172176", "name": "Mais de 6.5", "price": 6.9 },
+          { "id": "2384172176", "name": "Mais de 6.5", "price": 7.1 },
           { "id": "2384172177", "name": "Menos de 6.5", "price": 1.01 }
         ]
       },
@@ -1119,9 +1119,9 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2384169584", "name": "1", "price": 2.32 },
+          { "id": "2384169584", "name": "1", "price": 2.37 },
           { "id": "2384169586", "name": "X", "price": 3.1 },
-          { "id": "2384169587", "name": "2", "price": 2.75 }
+          { "id": "2384169587", "name": "2", "price": 2.67 }
         ]
       },
       {
@@ -1130,7 +1130,7 @@
         "name": "Total de Golos Mais/Menos",
         "selections": [
           { "id": "2384172334", "name": "Mais de 0.5", "price": 1.06 },
-          { "id": "2384172335", "name": "Menos de 0.5", "price": 4.8 }
+          { "id": "2384172335", "name": "Menos de 0.5", "price": 4.75 }
         ]
       },
       {
@@ -1138,8 +1138,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384172327", "name": "Mais de 1.5", "price": 1.31 },
-          { "id": "2384172328", "name": "Menos de 1.5", "price": 2.6 }
+          { "id": "2384172327", "name": "Mais de 1.5", "price": 1.32 },
+          { "id": "2384172328", "name": "Menos de 1.5", "price": 2.55 }
         ]
       },
       {
@@ -1147,8 +1147,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384172325", "name": "Mais de 2.5", "price": 1.9 },
-          { "id": "2384172326", "name": "Menos de 2.5", "price": 1.6 }
+          { "id": "2384172325", "name": "Mais de 2.5", "price": 1.95 },
+          { "id": "2384172326", "name": "Menos de 2.5", "price": 1.57 }
         ]
       },
       {
@@ -1156,8 +1156,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384172329", "name": "Mais de 3.5", "price": 2.95 },
-          { "id": "2384172330", "name": "Menos de 3.5", "price": 1.23 }
+          { "id": "2384172329", "name": "Mais de 3.5", "price": 3.05 },
+          { "id": "2384172330", "name": "Menos de 3.5", "price": 1.22 }
         ]
       },
       {
@@ -1165,8 +1165,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384172331", "name": "Mais de 4.5", "price": 4.5 },
-          { "id": "2384172333", "name": "Menos de 4.5", "price": 1.08 }
+          { "id": "2384172331", "name": "Mais de 4.5", "price": 4.6 },
+          { "id": "2384172333", "name": "Menos de 4.5", "price": 1.07 }
         ]
       },
       {
@@ -1174,7 +1174,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2384172336", "name": "Mais de 5.5", "price": 5.8 },
+          { "id": "2384172336", "name": "Mais de 5.5", "price": 5.9 },
           { "id": "2384172337", "name": "Menos de 5.5", "price": 1.02 }
         ]
       },
@@ -1183,8 +1183,8 @@
         "type": "BTSC",
         "name": "Ambas as Equipas Marcam",
         "selections": [
-          { "id": "2384169613", "name": "Sim", "price": 1.7 },
-          { "id": "2384169614", "name": "N\u00e3o", "price": 1.78 }
+          { "id": "2384169613", "name": "Sim", "price": 1.72 },
+          { "id": "2384169614", "name": "N\u00e3o", "price": 1.75 }
         ]
       }
     ],
@@ -1212,7 +1212,7 @@
         "selections": [
           { "id": "2385617042", "name": "1", "price": 2.3 },
           { "id": "2385617043", "name": "X", "price": 3.1 },
-          { "id": "2385617044", "name": "2", "price": 2.8 }
+          { "id": "2385617044", "name": "2", "price": 2.77 }
         ]
       },
       {
@@ -1301,9 +1301,9 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2385718083", "name": "1", "price": 1.83 },
+          { "id": "2385718083", "name": "1", "price": 1.88 },
           { "id": "2385718084", "name": "X", "price": 3.35 },
-          { "id": "2385718085", "name": "2", "price": 3.65 }
+          { "id": "2385718085", "name": "2", "price": 3.5 }
         ]
       },
       {
@@ -1321,7 +1321,7 @@
         "name": "Total de Golos Mais/Menos",
         "selections": [
           { "id": "2385797145", "name": "Mais de 1.5", "price": 1.29 },
-          { "id": "2385797146", "name": "Menos de 1.5", "price": 2.7 }
+          { "id": "2385797146", "name": "Menos de 1.5", "price": 2.67 }
         ]
       },
       {
@@ -1392,9 +1392,9 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2385720139", "name": "1", "price": 2.95 },
+          { "id": "2385720139", "name": "1", "price": 2.8 },
           { "id": "2385720140", "name": "X", "price": 3.15 },
-          { "id": "2385720141", "name": "2", "price": 2.15 }
+          { "id": "2385720141", "name": "2", "price": 2.25 }
         ]
       },
       {
@@ -1402,8 +1402,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385791364", "name": "Mais de 0.5", "price": 1.06 },
-          { "id": "2385791365", "name": "Menos de 0.5", "price": 4.9 }
+          { "id": "2385791364", "name": "Mais de 0.5", "price": 1.05 },
+          { "id": "2385791365", "name": "Menos de 0.5", "price": 5 }
         ]
       },
       {
@@ -1411,8 +1411,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385791358", "name": "Mais de 1.5", "price": 1.29 },
-          { "id": "2385791359", "name": "Menos de 1.5", "price": 2.67 }
+          { "id": "2385791358", "name": "Mais de 1.5", "price": 1.28 },
+          { "id": "2385791359", "name": "Menos de 1.5", "price": 2.7 }
         ]
       },
       {
@@ -1420,7 +1420,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385791356", "name": "Mais de 2.5", "price": 1.85 },
+          { "id": "2385791356", "name": "Mais de 2.5", "price": 1.83 },
           { "id": "2385791357", "name": "Menos de 2.5", "price": 1.65 }
         ]
       },
@@ -1429,7 +1429,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385791360", "name": "Mais de 3.5", "price": 2.87 },
+          { "id": "2385791360", "name": "Mais de 3.5", "price": 2.85 },
           { "id": "2385791361", "name": "Menos de 3.5", "price": 1.25 }
         ]
       },
@@ -1452,12 +1452,21 @@
         ]
       },
       {
+        "id": "1117151144",
+        "type": "HCTG",
+        "name": "Total de Golos Mais/Menos",
+        "selections": [
+          { "id": "2385791368", "name": "Mais de 6.5", "price": 8 },
+          { "id": "2385791369", "name": "Menos de 6.5", "price": 1.01 }
+        ]
+      },
+      {
         "id": "1117128155",
         "type": "BTSC",
         "name": "Ambas as Equipas Marcam",
         "selections": [
-          { "id": "2385720164", "name": "Sim", "price": 1.7 },
-          { "id": "2385720165", "name": "N\u00e3o", "price": 1.78 }
+          { "id": "2385720164", "name": "Sim", "price": 1.65 },
+          { "id": "2385720165", "name": "N\u00e3o", "price": 1.83 }
         ]
       }
     ],
@@ -1547,7 +1556,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385792588", "name": "Mais de 6.5", "price": 7.4 },
+          { "id": "2385792588", "name": "Mais de 6.5", "price": 7.3 },
           { "id": "2385792589", "name": "Menos de 6.5", "price": 1.01 }
         ]
       },
@@ -1583,9 +1592,9 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2385723785", "name": "1", "price": 3.05 },
-          { "id": "2385723786", "name": "X", "price": 3.2 },
-          { "id": "2385723787", "name": "2", "price": 2.1 }
+          { "id": "2385723785", "name": "1", "price": 3 },
+          { "id": "2385723786", "name": "X", "price": 3.15 },
+          { "id": "2385723787", "name": "2", "price": 2.12 }
         ]
       },
       {
@@ -1643,15 +1652,6 @@
         ]
       },
       {
-        "id": "1117151041",
-        "type": "HCTG",
-        "name": "Total de Golos Mais/Menos",
-        "selections": [
-          { "id": "2385791022", "name": "Mais de 6.5", "price": 8 },
-          { "id": "2385791023", "name": "Menos de 6.5", "price": 1.01 }
-        ]
-      },
-      {
         "id": "1117129396",
         "type": "BTSC",
         "name": "Ambas as Equipas Marcam",
@@ -1683,9 +1683,9 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2385728605", "name": "1", "price": 2.8 },
+          { "id": "2385728605", "name": "1", "price": 2.72 },
           { "id": "2385728606", "name": "X", "price": 3.2 },
-          { "id": "2385728607", "name": "2", "price": 2.22 }
+          { "id": "2385728607", "name": "2", "price": 2.27 }
         ]
       },
       {
@@ -1702,8 +1702,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385791465", "name": "Mais de 1.5", "price": 1.25 },
-          { "id": "2385791466", "name": "Menos de 1.5", "price": 2.82 }
+          { "id": "2385791465", "name": "Mais de 1.5", "price": 1.26 },
+          { "id": "2385791466", "name": "Menos de 1.5", "price": 2.8 }
         ]
       },
       {
@@ -1720,7 +1720,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385791463", "name": "Mais de 3.5", "price": 2.7 },
+          { "id": "2385791463", "name": "Mais de 3.5", "price": 2.72 },
           { "id": "2385791464", "name": "Menos de 3.5", "price": 1.28 }
         ]
       },
@@ -1729,7 +1729,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385791467", "name": "Mais de 4.5", "price": 4.1 },
+          { "id": "2385791467", "name": "Mais de 4.5", "price": 4.15 },
           { "id": "2385791468", "name": "Menos de 4.5", "price": 1.1 }
         ]
       },
@@ -1747,7 +1747,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385791473", "name": "Mais de 6.5", "price": 7.5 },
+          { "id": "2385791473", "name": "Mais de 6.5", "price": 7.6 },
           { "id": "2385791474", "name": "Menos de 6.5", "price": 1.01 }
         ]
       },
@@ -1783,9 +1783,9 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2385731731", "name": "1", "price": 3.85 },
+          { "id": "2385731731", "name": "1", "price": 4.1 },
           { "id": "2385731732", "name": "X", "price": 3.45 },
-          { "id": "2385731733", "name": "2", "price": 1.75 }
+          { "id": "2385731733", "name": "2", "price": 1.7 }
         ]
       },
       {
@@ -1802,8 +1802,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385796793", "name": "Mais de 1.5", "price": 1.25 },
-          { "id": "2385796794", "name": "Menos de 1.5", "price": 2.82 }
+          { "id": "2385796793", "name": "Mais de 1.5", "price": 1.26 },
+          { "id": "2385796794", "name": "Menos de 1.5", "price": 2.8 }
         ]
       },
       {
@@ -1821,7 +1821,7 @@
         "name": "Total de Golos Mais/Menos",
         "selections": [
           { "id": "2385796791", "name": "Mais de 3.5", "price": 2.7 },
-          { "id": "2385796792", "name": "Menos de 3.5", "price": 1.28 }
+          { "id": "2385796792", "name": "Menos de 3.5", "price": 1.29 }
         ]
       },
       {
@@ -1829,7 +1829,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385796795", "name": "Mais de 4.5", "price": 4.15 },
+          { "id": "2385796795", "name": "Mais de 4.5", "price": 4.1 },
           { "id": "2385796796", "name": "Menos de 4.5", "price": 1.1 }
         ]
       },
@@ -1847,7 +1847,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385796801", "name": "Mais de 6.5", "price": 7.5 },
+          { "id": "2385796801", "name": "Mais de 6.5", "price": 7.3 },
           { "id": "2385796802", "name": "Menos de 6.5", "price": 1.01 }
         ]
       },
@@ -1893,8 +1893,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385735493", "name": "Mais de 0.5", "price": 1.05 },
-          { "id": "2385735494", "name": "Menos de 0.5", "price": 5 }
+          { "id": "2385735493", "name": "Mais de 0.5", "price": 1.06 },
+          { "id": "2385735494", "name": "Menos de 0.5", "price": 4.9 }
         ]
       },
       {
@@ -1903,7 +1903,7 @@
         "name": "Total de Golos Mais/Menos",
         "selections": [
           { "id": "2385735487", "name": "Mais de 1.5", "price": 1.29 },
-          { "id": "2385735488", "name": "Menos de 1.5", "price": 2.67 }
+          { "id": "2385735488", "name": "Menos de 1.5", "price": 2.65 }
         ]
       },
       {
@@ -1929,7 +1929,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385735491", "name": "Mais de 4.5", "price": 4.45 },
+          { "id": "2385735491", "name": "Mais de 4.5", "price": 4.4 },
           { "id": "2385735492", "name": "Menos de 4.5", "price": 1.08 }
         ]
       },
@@ -1938,8 +1938,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385735495", "name": "Mais de 5.5", "price": 5.8 },
-          { "id": "2385735496", "name": "Menos de 5.5", "price": 1.02 }
+          { "id": "2385735495", "name": "Mais de 5.5", "price": 5.7 },
+          { "id": "2385735496", "name": "Menos de 5.5", "price": 1.03 }
         ]
       },
       {
@@ -1974,9 +1974,9 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2385738817", "name": "1", "price": 2.12 },
+          { "id": "2385738817", "name": "1", "price": 2.15 },
           { "id": "2385738811", "name": "X", "price": 3.25 },
-          { "id": "2385738812", "name": "2", "price": 2.95 }
+          { "id": "2385738812", "name": "2", "price": 2.85 }
         ]
       },
       {
@@ -1993,8 +1993,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385797646", "name": "Mais de 1.5", "price": 1.26 },
-          { "id": "2385797647", "name": "Menos de 1.5", "price": 2.82 }
+          { "id": "2385797646", "name": "Mais de 1.5", "price": 1.25 },
+          { "id": "2385797647", "name": "Menos de 1.5", "price": 2.85 }
         ]
       },
       {
@@ -2011,8 +2011,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385797644", "name": "Mais de 3.5", "price": 2.72 },
-          { "id": "2385797645", "name": "Menos de 3.5", "price": 1.28 }
+          { "id": "2385797644", "name": "Mais de 3.5", "price": 2.7 },
+          { "id": "2385797645", "name": "Menos de 3.5", "price": 1.29 }
         ]
       },
       {
@@ -2020,7 +2020,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385797648", "name": "Mais de 4.5", "price": 4.15 },
+          { "id": "2385797648", "name": "Mais de 4.5", "price": 4.1 },
           { "id": "2385797649", "name": "Menos de 4.5", "price": 1.1 }
         ]
       },
@@ -2047,8 +2047,8 @@
         "type": "BTSC",
         "name": "Ambas as Equipas Marcam",
         "selections": [
-          { "id": "2385738836", "name": "Sim", "price": 1.65 },
-          { "id": "2385738837", "name": "N\u00e3o", "price": 1.85 }
+          { "id": "2385738836", "name": "Sim", "price": 1.62 },
+          { "id": "2385738837", "name": "N\u00e3o", "price": 1.87 }
         ]
       }
     ],
@@ -2076,7 +2076,7 @@
         "selections": [
           { "id": "2385747549", "name": "1", "price": 1.57 },
           { "id": "2385747550", "name": "X", "price": 3.7 },
-          { "id": "2385747551", "name": "2", "price": 4.55 }
+          { "id": "2385747551", "name": "2", "price": 4.6 }
         ]
       },
       {
@@ -2085,7 +2085,7 @@
         "name": "Total de Golos Mais/Menos",
         "selections": [
           { "id": "2385821350", "name": "Mais de 0.5", "price": 1.04 },
-          { "id": "2385821351", "name": "Menos de 0.5", "price": 5.3 }
+          { "id": "2385821351", "name": "Menos de 0.5", "price": 5.2 }
         ]
       },
       {
@@ -2093,7 +2093,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385821344", "name": "Mais de 1.5", "price": 1.22 },
+          { "id": "2385821344", "name": "Mais de 1.5", "price": 1.23 },
           { "id": "2385821345", "name": "Menos de 1.5", "price": 3 }
         ]
       },
@@ -2102,8 +2102,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385821340", "name": "Mais de 2.5", "price": 1.65 },
-          { "id": "2385821341", "name": "Menos de 2.5", "price": 1.83 }
+          { "id": "2385821340", "name": "Mais de 2.5", "price": 1.7 },
+          { "id": "2385821341", "name": "Menos de 2.5", "price": 1.78 }
         ]
       },
       {
@@ -2138,7 +2138,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385821352", "name": "Mais de 6.5", "price": 6.9 },
+          { "id": "2385821352", "name": "Mais de 6.5", "price": 6.8 },
           { "id": "2385821353", "name": "Menos de 6.5", "price": 1.01 }
         ]
       },
@@ -2174,9 +2174,9 @@
         "type": "MRES",
         "name": "Resultado Final",
         "selections": [
-          { "id": "2385749759", "name": "1", "price": 5.1 },
-          { "id": "2385749760", "name": "X", "price": 3.9 },
-          { "id": "2385749761", "name": "2", "price": 1.5 }
+          { "id": "2385749759", "name": "1", "price": 4.75 },
+          { "id": "2385749760", "name": "X", "price": 3.85 },
+          { "id": "2385749761", "name": "2", "price": 1.53 }
         ]
       },
       {
@@ -2194,7 +2194,7 @@
         "name": "Total de Golos Mais/Menos",
         "selections": [
           { "id": "2385791931", "name": "Mais de 1.5", "price": 1.22 },
-          { "id": "2385791932", "name": "Menos de 1.5", "price": 3.05 }
+          { "id": "2385791932", "name": "Menos de 1.5", "price": 3 }
         ]
       },
       {
@@ -2220,7 +2220,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385791933", "name": "Mais de 4.5", "price": 3.9 },
+          { "id": "2385791933", "name": "Mais de 4.5", "price": 3.85 },
           { "id": "2385791934", "name": "Menos de 4.5", "price": 1.12 }
         ]
       },
@@ -2238,7 +2238,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385791939", "name": "Mais de 6.5", "price": 7 },
+          { "id": "2385791939", "name": "Mais de 6.5", "price": 6.9 },
           { "id": "2385791940", "name": "Menos de 6.5", "price": 1.01 }
         ]
       },
@@ -2247,8 +2247,8 @@
         "type": "BTSC",
         "name": "Ambas as Equipas Marcam",
         "selections": [
-          { "id": "2385749784", "name": "Sim", "price": 1.72 },
-          { "id": "2385749785", "name": "N\u00e3o", "price": 1.75 }
+          { "id": "2385749784", "name": "Sim", "price": 1.7 },
+          { "id": "2385749785", "name": "N\u00e3o", "price": 1.78 }
         ]
       }
     ],
@@ -2284,8 +2284,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385810395", "name": "Mais de 0.5", "price": 1.06 },
-          { "id": "2385810396", "name": "Menos de 0.5", "price": 4.9 }
+          { "id": "2385810395", "name": "Mais de 0.5", "price": 1.05 },
+          { "id": "2385810396", "name": "Menos de 0.5", "price": 5 }
         ]
       },
       {
@@ -2293,8 +2293,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385810389", "name": "Mais de 1.5", "price": 1.29 },
-          { "id": "2385810390", "name": "Menos de 1.5", "price": 2.67 }
+          { "id": "2385810389", "name": "Mais de 1.5", "price": 1.28 },
+          { "id": "2385810390", "name": "Menos de 1.5", "price": 2.7 }
         ]
       },
       {
@@ -2320,7 +2320,7 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385810393", "name": "Mais de 4.5", "price": 4.3 },
+          { "id": "2385810393", "name": "Mais de 4.5", "price": 4.35 },
           { "id": "2385810394", "name": "Menos de 4.5", "price": 1.09 }
         ]
       },
@@ -2329,17 +2329,8 @@
         "type": "HCTG",
         "name": "Total de Golos Mais/Menos",
         "selections": [
-          { "id": "2385810397", "name": "Mais de 5.5", "price": 5.6 },
+          { "id": "2385810397", "name": "Mais de 5.5", "price": 5.7 },
           { "id": "2385810398", "name": "Menos de 5.5", "price": 1.03 }
-        ]
-      },
-      {
-        "id": "1117157083",
-        "type": "HCTG",
-        "name": "Total de Golos Mais/Menos",
-        "selections": [
-          { "id": "2385810399", "name": "Mais de 6.5", "price": 7.9 },
-          { "id": "2385810400", "name": "Menos de 6.5", "price": 1.01 }
         ]
       },
       {

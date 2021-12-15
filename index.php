@@ -5,8 +5,8 @@ include 'tableManager.php';
 class BetanoSports extends tableManager {
 
   public $gameOdds = [];
-  public $URL = 'https://www.betano.pt/adserve?type=OddsComparisonFeed&lang=pt&sport=FOOT';
-  // public $URL = 'https://www.betano.pt/adserve?type=OddsComparisonFeed&lang=pt&sport=FOOT&leagueId=527';
+  // public $URL = 'https://www.betano.pt/adserve?type=OddsComparisonFeed&lang=pt&sport=FOOT';
+  public $URL = 'https://www.betano.pt/adserve?type=OddsComparisonFeed&lang=pt&sport=FOOT&leagueId=527';
   public $type_array = [
     "Total de Golos Mais/Menos" => 'goal_count',
     "Resultado Final" => "final_score",
@@ -37,6 +37,8 @@ class BetanoSports extends tableManager {
     $this->verify_team($game['teams'][1]['name']);
     $this->verify_team_map($game['teams'][0]);
     $this->verify_team_map($game['teams'][1]);
+    $this->verify_competition_map($game);
+    $this->verify_competition_season($game);
   }
 
 
@@ -75,6 +77,25 @@ class BetanoSports extends tableManager {
     }
   }
 
+  public function verify_competition_map($game) {
+    try {
+      $dbConnection = $this->connect();
+      $sql = "SELECT * FROM competitions_map WHERE competition_op_id = :competition_op_id AND operator = 'BETANO'";
+      $stmt = $dbConnection->prepare($sql);
+      $stmt->execute([
+        ':competition_op_id' => $game['leagueid']
+      ]);
+      $result = $stmt->fetchAll();
+      if (count($result) == 0) {
+        $this->register_competition_map($game);
+      }
+      $dbConnection = null;
+    } catch (Exception $e) {
+      echo 'Caught exception: ',  $e->getMessage(), "\n";
+    } catch (Exception $e) {
+      echo 'Caught exception: ',  $e->getMessage(), "\n";
+    }
+  }
 
   public function verify_team($team) {
     try {
@@ -147,7 +168,6 @@ class BetanoSports extends tableManager {
 
 
   public function register_competition($leaguename, $regionname) {
-
     try {
       $dbConnection = $this->connect();
       $sql = "INSERT INTO competitions (name, geographical_area_id) VALUES (:name,  (SELECT id FROM geographical_areas WHERE name = :region_name))";
@@ -250,64 +270,13 @@ class BetanoSports extends tableManager {
     }
   }
 
-  public function register_market($market) {
-    try {
-      $dbConnection = $this->connect();
-      foreach ($market['selections'] as $selection) {
-        $sql = "INSERT INTO markets (type, side, value) VALUES 
-                (:type, :side, :value)";
-        $stmt = $dbConnection->prepare($sql);
-        if ($market['name'] == 'Total de Golos Mais/Menos') {
-          $stmt->execute([
-            ':type' => $this->type_array[$market['name']],
-            ':side' => null,
-            ':value' => $selection['name']
-          ]);
-        } elseif ($market['name'] == 'Resultado Final') {
-          $stmt->execute([
-            ':type' => $this->type_array[$market['name']],
-            ':side' => $selection['name'],
-            ':value' => null
-          ]);
-        }
-      }
-    } catch (Exception $e) {
-      echo 'Caught exception: ',  $e->getMessage(), "\n";
-    }
-  }
-
-
-  public function register_markets_map($game) {
-    try {
-      $dbConnection = $this->connect();
-      foreach ($game['market'] as $market) {
-        $sql = "INSERT INTO markets_map (market_op_id, operator, market_id) VALUES (
-                :market_op_id, 
-                'BETANO', 
-                (SELECT id FROM markets WHERE ???))";
-        $stmt = $dbConnection->prepare($sql);
-        foreach ($market['selections'] as $selection) {
-          $stmt->execute([
-            ':market_op_id' => $market['type'] . $selection['name'],
-          ]);
-        }
-      }
-    } catch (Exception $e) {
-      echo 'Caught exception: ',  $e->getMessage(), "\n";
-    }
-  }
 
   public function register_fixture_markets($game) {
     try {
       $dbConnection = $this->connect();
       foreach ($game['market'] as $market) {
-        $sql = "INSERT INTO fixtures_markets (fixture_id, market_id) VALUES 
-              ((SELECT fixture_id from fixtures_map WHERE fixture_op_id = :fixture_id AND operator = 'BETANO'),
-              (SELECT )";
-        $stmt = $dbConnection->prepare($sql);
-        $stmt->execute([
-          ':fixture_id' => $game['id'],
-        ]);
+        foreach ($market['selections'] as $selection) {
+        }
       }
     } catch (Exception $e) {
       echo 'Caught exception: ',  $e->getMessage(), "\n";
@@ -327,7 +296,10 @@ class BetanoSports extends tableManager {
         ':year' => date_format(date_create($game['date']), 'Y')
       ]);
       $result = $stmt->fetchAll();
-      return (count($result) > 0) ? true : false;
+      $dbConnection = null;
+      if (count($result) == 0) {
+        $this->register_competition_season($game);
+      }
     } catch (Exception $e) {
       echo 'Caught exception: ',  $e->getMessage(), "\n";
     }
@@ -335,36 +307,49 @@ class BetanoSports extends tableManager {
 
   public function register_competition_season($game) {
     try {
-      if (!$this->verify_competition_season($game)) {
-        $dbConnection = $this->connect();
-        $sql = "INSERT INTO competition_season (competition_id, year) VALUES 
+      $dbConnection = $this->connect();
+      $sql = "INSERT INTO competition_season (competition_id, year) VALUES 
               ((SELECT id FROM competitions WHERE name = :competition), :year)";
-        $stmt = $dbConnection->prepare($sql);
-        $stmt->execute([
-          ':competition' => $game['leaguename'],
-          ':year' => date_format(date_create($game['date']), 'Y')
-        ]);
-        $dbConnection = null;
-      }
+      $stmt = $dbConnection->prepare($sql);
+      $stmt->execute([
+        ':competition' => $game['leaguename'],
+        ':year' => date_format(date_create($game['date']), 'Y')
+      ]);
+      $dbConnection = null;
     } catch (Exception $e) {
       echo 'Caught exception: ',  $e->getMessage(), "\n";
     }
   }
 
+  public function register_competition_map($game) {
+    try {
+      $dbConnection = $this->connect();
+      $sql = "INSERT INTO competitions_map (competition_op_id, operator, competition_id) VALUES 
+              (:competition_op_id, 'BETANO', (SELECT id FROM competitions WHERE name = :competition))";
+      $stmt = $dbConnection->prepare($sql);
+      $stmt->execute([
+        ':competition_op_id' => $game['leagueid'],
+        ':competition' => $game['leaguename']
+      ]);
+      $dbConnection = null;
+    } catch (Exception $e) {
+      echo 'Caught exception: ',  $e->getMessage(), "\n";
+    }
+  }
 
   public function insertGamesToDb() {
     try {
       $this->get_data();
       foreach ($this->gameOdds as $game) {
+        $this->verify_fields($game);
         if (!$this->verify_fixture_exists($game['id'])) {
-          $this->verify_fields($game);
           $this->register_fixture($game);
           $this->register_fixtures_map($game);
-          foreach ($game['market'] as $market) {
-            $this->register_market($market);
-          }
-          // $this->register_markets_map($game);
-          $this->register_competition_season($game);
+          $this->register_fixture_markets($game);
+
+
+
+
           // $this->register_fixture_markets($game);
           // print_r("Game: " . $game['name'] . " inserted successfully\n");
         } else {
@@ -375,6 +360,12 @@ class BetanoSports extends tableManager {
       echo 'Caught exception: ',  $e->getMessage(), "\n";
     }
   }
+
+
+
+  public function register_fixtures_markets() {
+  }
+
 
   public function save_data() {
     try {
@@ -394,7 +385,7 @@ $odds = new BetanoSports();
 
 
 // $odds->save_data();
-$odds->drop_all_tables();
-$odds->create_tables();
-// $odds->insertGamesToDb();
+// $odds->drop_all_tables();
+// $odds->create_tables();
+$odds->insertGamesToDb();
 print_r('DONE');
