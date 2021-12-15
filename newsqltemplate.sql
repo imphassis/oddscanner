@@ -17,4 +17,28 @@ INSERT INTO markets_map(market_op_id,operator,market_id) VALUES
 ("HCTG-+6.5", "BETANO", 16),
 ("HCTG--6.5", "BETANO", 17),
 ("BTSC-YES", "BETANO", 18),
-("BTSC,-NO", "BETANO", 19)
+("BTSC,-NO", "BETANO", 19);
+
+
+CREATE TABLE `fixtures_markets` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `fixture_id` int NOT NULL,
+  `market_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique_fixture` (`fixture_id`, `market_id`),
+  CONSTRAINT `fixtures_markets_ibfk_1` FOREIGN KEY (`fixture_id`) REFERENCES `fixtures` (`id`),
+  CONSTRAINT `fixtures_markets_ibfk_2` FOREIGN KEY (`market_id`) REFERENCES `markets` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+
+
+CREATE TABLE IF NOT EXISTS `fixtures_markets_odds` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `value` decimal(10,2) NOT NULL,
+  `fixtures_markets_id` int NOT NULL,
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique_fixture` (`fixtures_markets_id`, `value`),
+  CONSTRAINT `fixtures_markets_odds_ibfk_1` FOREIGN KEY (`fixtures_markets_id`) REFERENCES `fixtures_markets` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+

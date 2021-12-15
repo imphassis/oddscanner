@@ -158,9 +158,10 @@ class tableManager {
     try {
       $dbConnection = $this->connect();
       $sql = "CREATE TABLE IF NOT EXISTS `fixtures_markets` (
+              `id` int(11) NOT NULL AUTO_INCREMENT,
              `fixture_id` INT(11) NOT NULL,
              `market_id` INT(11) NOT NULL,
-              PRIMARY KEY (`fixture_id`, `market_id`),
+              PRIMARY KEY (`id`),
               FOREIGN KEY (`fixture_id`) REFERENCES `fixtures`(`id`),
               FOREIGN KEY (`market_id`) REFERENCES `markets`(`id`)
               )ENGINE=InnoDB DEFAULT CHARSET=utf8;";
