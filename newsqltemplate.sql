@@ -42,3 +42,31 @@ CREATE TABLE IF NOT EXISTS `fixtures_markets_odds` (
   CONSTRAINT `fixtures_markets_odds_ibfk_1` FOREIGN KEY (`fixtures_markets_id`) REFERENCES `fixtures_markets` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
+DELETE FROM fixtures;
+
+DELETE FROM fixtures_map; 
+DELETE FROM fixtures_markets;
+DELETE FROM fixtures_markets_odds;
+
+
+
+
+
+
+SELECT id FROM competition_season WHERE competition_id = 1;
+
+
+
+
+
+
+
+
+SELECT id FROM fixtures WHERE
+team1_id = 7 AND 
+team2_id = 8 AND 
+date = "2021-12-18 15:00:00" AND 
+competition_season_id = 
+        (SELECT id FROM competition_season WHERE competition_id =
+        (SELECT id from competitions WHERE name = 'League One'))
+AND geographical_area_id = (SELECT id FROM geographical_areas WHERE name = 'Inglaterra');

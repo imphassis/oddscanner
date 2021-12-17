@@ -1,0 +1,50 @@
+Objetivo: Aceder ao feed de cada operador, processar a informação e inserir as odds no sistema!
+Geographical Areas
+    -> Name
+Teams:
+    -> Name
+Teams Map:
+    -> Team
+    -> Type
+    -> Identifier
+Competitions
+    -> Name
+    -> Geographical Area
+Competitions Map:
+    -> Competition
+    -> Type
+    -> Identifier
+Competitions Seasons
+    -> Competition
+    -> Season
+Fixtures
+    -> Competition Season
+    -> Home Team
+    -> Away Team
+    -> Datetime
+Fixtures Markets
+    -> Fixture
+    -> Market
+Fixtures Markets Odds
+    -> Fixture Market
+    -> Odd
+    -> Datetime
+Markets
+    -> Type
+    -> Side
+    -> Value
+Markets Map:
+    -> Market
+    -> Type
+    -> Identifier
+Feed = Url
+Loop Feed as Jogo:
+    1. Competition Check
+    2. Home Team Check
+    3. Away Team Check
+    4. Fixture Check
+    Loop Jogo.Markets as Market:
+        Loop Market.Selections as Selection:
+            1. Check Market
+            2. Fixture Market Check
+            3. Fixture Market Odd

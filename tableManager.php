@@ -99,14 +99,12 @@ class tableManager {
              `team1_id` int(11) NOT NULL,
              `team2_id` int(11) NOT NULL,
              `date` datetime NOT NULL,
-             `competition_id` int(11) DEFAULT NULL,
-             `geographical_area_id` int(11) DEFAULT NULL,
+             `competition_season_id` int(11) DEFAULT NULL,
               UNIQUE KEY `id` (`id`),
               PRIMARY KEY (`id`),
               CONSTRAINT `fixtures_ibfk_1` FOREIGN KEY (`team1_id`) REFERENCES `teams` (`id`),
               CONSTRAINT `fixtures_ibfk_2` FOREIGN KEY (`team2_id`) REFERENCES `teams` (`id`),
-              CONSTRAINT `fixtures_ibfk_3` FOREIGN KEY (`competition_id`) REFERENCES `competitions` (`id`),
-              CONSTRAINT `fixtures_ibfk_4` FOREIGN KEY (`geographical_area_id`) REFERENCES `geographical_areas` (`id`)
+              CONSTRAINT `fixtures_ibfk_3` FOREIGN KEY (`competition_season_id`) REFERENCES `competition_season` (`id`)
             ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
       $dbConnection->exec($sql);
       print_r("Table fixtures created successfully\n");
@@ -197,9 +195,10 @@ class tableManager {
     try {
       $dbConnection = $this->connect();
       $sql = "CREATE TABLE IF NOT EXISTS `competition_season` (
+             `id` int(11) NOT NULL AUTO_INCREMENT,
              `competition_id` INT(11) NOT NULL,
              `year` INT(11) NOT NULL,
-              PRIMARY KEY (`competition_id`, `year`),
+              PRIMARY KEY (`id`),
               FOREIGN KEY (`competition_id`) REFERENCES `competitions`(`id`)
               )ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
@@ -271,12 +270,14 @@ class tableManager {
     try {
       $dbConnection = $this->connect();
       $sql = "CREATE TABLE IF NOT EXISTS `fixtures_markets_odds` (
-             `fixture_id` INT(11) NOT NULL,
-             `operator` INT(11) NOT NULL,
-             `odd` VARCHAR(255) NOT NULL,
+             `id` int(11) NOT NULL AUTO_INCREMENT,
+             `fixture_market_id` INT(11) NOT NULL,
+             `operator` VARCHAR(255) NOT NULL,
+             `value` VARCHAR(255) NOT NULL,
              `datetime` DATETIME NOT NULL,
-             FOREIGN KEY (`fixture_id`) REFERENCES `fixtures_market`(`fixture_id`)
-              )ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+             PRIMARY KEY (`id`),
+             FOREIGN KEY (`fixture_market_id`) REFERENCES `fixtures_markets`(`id`)
+             )ENGINE=InnoDB DEFAULT CHARSET=utf8;";
       $dbConnection->exec($sql);
       $dbConnection = null;
       print_r("Table fixture_markets_odds created successfully\n");
@@ -301,6 +302,7 @@ class tableManager {
       $this->create_fixtures_markets_table();
       $this->create_market_map_table();
       $this->create_competition_map_table();
+      $this->create_fixture_markets_odds_table();
     } catch (Exception $e) {
       echo 'Caught exception: ',  $e->getMessage(), "\n";
     }
