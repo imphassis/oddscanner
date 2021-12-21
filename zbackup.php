@@ -7,28 +7,7 @@ class BetanoSports extends tableManager {
   public $gameOdds = [];
   // public $URL = 'https://www.betano.pt/adserve?type=OddsComparisonFeed&lang=pt&sport=FOOT';
   public $URL = 'https://www.betano.pt/adserve?type=OddsComparisonFeed&lang=pt&sport=FOOT&leagueId=527';
-  // ':market_op_id' => $this->market_array[$market["type"] . $selection['name']]
-  public $market_array = [
-    'MRES1' => 'MRES-1',
-    'MRESX' => 'MRES-X',
-    'MRES2' => 'MRES-2',
-    'HCTGMais de 0.5' => 'HCTG-+0.5',
-    'HCTGMenos de 0.5' => 'HCTG--0.5',
-    'HCTGMais de 1.5' => 'HCTG-+1.5',
-    'HCTGMenos de 1.5' => 'HCTG--1.5',
-    'HCTGMais de 2.5' => 'HCTG-+2.5',
-    'HCTGMenos de 2.5' => 'HCTG--2.5',
-    'HCTGMais de 3.5' => 'HCTG-+3.5',
-    'HCTGMenos de 3.5' => 'HCTG--3.5',
-    'HCTGMais de 4.5' => 'HCTG-+4.5',
-    'HCTGMenos de 4.5' => 'HCTG--4.5',
-    'HCTGMais de 5.5' => 'HCTG-+5.5',
-    'HCTGMenos de 5.5' => 'HCTG--5.5',
-    'HCTGMais de 6.5' => 'HCTG-+6.5',
-    'HCTGMenos de 6.5' => 'HCTG--6.5',
-    'BTSCSim' => 'BTSC-YES',
-    "BTSCNão" => 'BTSC-NO',
-  ];
+
 
   public function __construct() {
     $this->db_host = "localhost";
@@ -160,7 +139,7 @@ class BetanoSports extends tableManager {
       $stmt->execute([':id' => $game["id"]]);
       $result = $stmt->fetchAll();
       $dbConnection = null;
-      return count($result) === 0;
+      return count($result) > 0;
     } catch (Exception $e) {
       echo 'Caught exception: ',  $e->getMessage(), "\n";
     } catch (Exception $e) {
@@ -179,11 +158,11 @@ class BetanoSports extends tableManager {
                 :date,
                 (SELECT id FROM competition_season WHERE id = (SELECT id from competitions WHERE name = :competition)))";
         $stmt = $dbConnection->prepare($sql);
-        $date = date_create($game['date']);
+        $date = new DateTime($game['date']);
         $stmt->execute([
           ':team1' => $game['teams'][0]['id'],
           ':team2' => $game['teams'][1]['id'],
-          ':date' => date_format($date, 'Y-m-d H:i:s'),
+          ':date' => $date->format('Y-m-d H:i:s'),
           ':competition' => $game['leaguename'],
         ]);
         $dbConnection = null;
@@ -302,13 +281,13 @@ class BetanoSports extends tableManager {
                         (SELECT id from competitions WHERE name = :competition))));";
 
         $stmt = $dbConnection->prepare($sql);
-        $date = date_create($game['date']);
+        $date = new DateTime($game['date']);
         $date =
           $stmt->execute([
             ':fixture_op_id' => $game['id'],
             ':team1' => $game['teams'][0]['name'],
             ':team2' => $game['teams'][1]['name'],
-            ':date' => date_format($date, 'Y-m-d H:i:s'),
+            ':date' => $date->format('Y-m-d H:i:s'),
             ':competition' => $game['leaguename']
           ]);
         $dbConnection = null;
@@ -353,7 +332,7 @@ class BetanoSports extends tableManager {
       $dbConnection = $this->connect();
       foreach ($game['market'] as $market) {
         foreach ($market['selections'] as $selection) {
-          $market_op_id = $this->market_array[$market["type"] . $selection['name']];
+          $market_op_id = $market["type"] . $selection['name'];
           if (!$this->verify_fixture_markets($game["id"], $market_op_id)) {
             $sql = "INSERT INTO fixtures_markets (fixture_id, market_id) VALUES (
                    (SELECT fixture_id FROM fixtures_map WHERE fixture_op_id = :game_id AND operator = 'BETANO'), 
@@ -431,7 +410,7 @@ class BetanoSports extends tableManager {
       $dbConnection = $this->connect();
       foreach ($game['market'] as $market) {
         foreach ($market['selections'] as $selection) {
-          $market_op_id = $this->market_array[$market["type"] . $selection['name']];
+          $market_op_id = $market["type"] . $selection['name'];
           $sql = "INSERT INTO fixtures_markets_odds (value, fixtures_markets_id, date) VALUES  (
             :value, 
             (SELECT id FROM fixtures_markets WHERE
@@ -461,7 +440,7 @@ class BetanoSports extends tableManager {
         $this->verify_fields($game);
         $this->register_fixture($game);
         $this->register_fixtures_map($game);
-        $this->register_fixture_markets($game);
+        // $this->register_fixture_markets($game);
         // $this->register_fixtures_markets_odds($game);
       }
     } catch (Exception $e) {

@@ -272,7 +272,6 @@ class tableManager {
       $sql = "CREATE TABLE IF NOT EXISTS `fixtures_markets_odds` (
              `id` int(11) NOT NULL AUTO_INCREMENT,
              `fixture_market_id` INT(11) NOT NULL,
-             `operator` VARCHAR(255) NOT NULL,
              `value` VARCHAR(255) NOT NULL,
              `datetime` DATETIME NOT NULL,
              PRIMARY KEY (`id`),

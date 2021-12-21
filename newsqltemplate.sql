@@ -70,3 +70,10 @@ competition_season_id =
         (SELECT id FROM competition_season WHERE competition_id =
         (SELECT id from competitions WHERE name = 'League One'))
 AND geographical_area_id = (SELECT id FROM geographical_areas WHERE name = 'Inglaterra');
+
+
+ALTER TABLE fixtures_markets_odds DROP COLUMN `operator`;
+
+
+
+INSERT INTO markets_map(market_op_id,operator,market_id) VALUES('draw','Placardpt',2);
