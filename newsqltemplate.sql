@@ -77,3 +77,39 @@ ALTER TABLE fixtures_markets_odds DROP COLUMN `operator`;
 
 
 INSERT INTO markets_map(market_op_id,operator,market_id) VALUES('draw','Placardpt',2);
+
+-- {
+--     "_id": "61bf7810d7ce2b3fe605f587",
+--     "eventID": "4638021372",
+--     "awayOdd": 2.7,
+--     "awayTeam": "Wuhan Three Towns",
+--     "country": "China",
+--     "createdDate": "2021-12-19T18:21:03.588Z",
+--     "drawOdd": 3,
+--     "eventNodeTypeId": 10,
+--     "homeOdd": 2,
+--     "homeTeam": "Zhejiang Greentown",
+--     "lastUpdate": "2021-12-21T12:55:55.194Z",
+--     "leagues": "League One",
+--     "localizedNames": "Zhejiang Greentown - Wuhan Three Towns",
+--     "markets": {
+--       "1x2": {
+--         "Wuhan Three Towns": 2.7,
+--         "Zhejiang Greentown": 2,
+--         "draw": 3
+--       }
+--     },
+--     "parentNodeId": "1523258904",
+--     "sport": "Futebol",
+--     "startDate": "2021-12-22T07:00:00.000Z",
+--     "url": "https://apostas.placard.pt/sports/soccer/events/4638021372"
+--   }
+INSERT INTO fixtures(team1_id,team2_id,date,competition_season_id) VALUES
+(
+    (SELECT id FROM teams WHERE name = 'Zhejiang Greentown'),
+    (SELECT id FROM teams WHERE name = 'Wuhan Three Towns'),
+    "2021-12-18 15:00:00",
+     1
+);
+
+

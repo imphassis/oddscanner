@@ -52,6 +52,14 @@ function get_data($url) {
 }
 
 
+function get_local_files() {
+  $file_name = 'placard.json';
+  $file_path = './' . $file_name;
+  $file_content = file_get_contents($file_path);
+  $file_content = json_decode($file_content, true);
+  return $file_content;
+}
+
 function connect() {
   $db_host = "localhost";
   $db_user = "root";
@@ -69,6 +77,7 @@ function connect() {
 
 
 function competition_check($leaguename) {
+  if (!$leaguename) return false;
   $dbConnection = connect();
   $sql = "SELECT * FROM competitions WHERE name =:leaguename";
   $stmt = $dbConnection->prepare($sql);
@@ -80,12 +89,12 @@ function competition_check($leaguename) {
 }
 
 
-function team_check($team_id) {
+function team_check($team_name) {
+  if (!$team_name) return false;
   $dbConnection = connect();
-  $sql = "SELECT * FROM teams WHERE id = 
-          (SELECT team_id FROM teams_map WHERE team_op_id = :team)";
+  $sql = "SELECT * FROM teams WHERE name =:team_name";
   $stmt = $dbConnection->prepare($sql);
-  $stmt->execute([':team' => $team_id]);
+  $stmt->execute([':team_name' => $team_name]);
   if ($stmt->rowCount() > 0) {
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     return ($result);
@@ -94,6 +103,13 @@ function team_check($team_id) {
 
 
 function fixture_check($home_team, $away_team, $date_time, $competition) {
+  $fixture_array = [
+    'team1_id' => $home_team['id'] ?? null,
+    'team2_id' => $away_team['id'] ?? null,
+    'date' => $date_time->format('Y-m-d H:i:s') ?? null,
+    'competition_season_id' => $competition["id"] ?? null
+  ];
+  if (in_array(null, $fixture_array)) return false;
   $dbConnection = connect();
   $sql = "SELECT * FROM fixtures WHERE
           team1_id = :home_team  AND
@@ -115,13 +131,13 @@ function fixture_check($home_team, $away_team, $date_time, $competition) {
 }
 
 
-function market_check($market_type, $selection_name, $name) {
+function market_check($market_type, $name) {
   $dbConnection = connect();
   $sql = "SELECT * FROM markets WHERE id = 
           (SELECT market_id FROM markets_map WHERE market_op_id = :market_type AND operator = :operator)";
   $stmt = $dbConnection->prepare($sql);
   $stmt->execute([
-    ':market_type' => $market_type . $selection_name,
+    ':market_type' => $market_type,
     ':operator' => $name
   ]);
   if ($stmt->rowCount() > 0) {
@@ -185,7 +201,8 @@ function register_betano_odds($timezone, $name, $url) {
       $fixture =  fixture_check($home_team, $away_team, $date_time, $competition);
       foreach ($game['market'] as $market) {
         foreach ($market['selections'] as $selection) {
-          $market_db = market_check($market['type'], $selection['name'], $name);
+          $market_type = $market['type'] . $selection['name'];
+          $market_db = market_check($market_type, $name);
           if (!$fixture ?? false) continue;
           register_fixture_market($fixture['id'], $market_db['id']);
           register_fixture_market_odd($fixture['id'], $selection["price"], $market_db['id']);
@@ -202,27 +219,23 @@ $placard = new Placard();
 // register_betano_odds($betano->getTimezone(), $betano->getName(), $betano->getUrl());
 
 function register_placard_odds($timezone, $name, $url) {
-  $data = get_data($url);
+  // $data = get_data($url);
+  $data = get_local_files();
   if ($data) {
     foreach ($data as $game) {
-      $competition = competition_check($game['leagues']);
-      $home_team = team_check($game['homeTeam']);
-      $away_team = team_check($game['awayTeam']);
-      $date_time = new DateTime($game['startDate'], new DateTimeZone($timezone));
-      // $fixture =  fixture_check($home_team, $away_team, $date_time, $competition);
-      foreach ($game['markets'] as $key => $market) {
+      $competition = competition_check($game['leagues'] ?? null);
+      $home_team = team_check($game['homeTeam'] ?? null);
+      $away_team = team_check($game['awayTeam'] ?? null);
+      $date_time = new DateTime($game['startDate'] ?? null, new DateTimeZone($timezone));
+      $fixture =  fixture_check($home_team, $away_team, $date_time, $competition);
+      $market = $game['markets']['1x2'] ?? false;
+      if ($market && $fixture) {
         foreach ($market as $key => $selection) {
-
-          // print_r($market[$key]);
-
-          $type = $key . "-" . $selection['name'];
-          //   $market_db = market_check($market['type'], $selection['name'], $name);
+          $market_type = '1x2' . array_search($key, $game);
+          $market_db = market_check($market_type, $name);
+          register_fixture_market($fixture['id'], $market_db['id']);
+          register_fixture_market_odd($fixture['id'], $selection, $market_db['id']);
         }
-        // foreach ($market['selections'] as $selection) {
-        //   if (!$fixture ?? false) continue;
-        //   register_fixture_market($fixture['id'], $market_db['id']);
-        //   register_fixture_market_odd($fixture['id'], $selection["price"], $market_db['id']);
-        // }
       }
     }
   }
